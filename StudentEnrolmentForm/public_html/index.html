@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script
+        src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h2>Student Enrollment Form </h2>
+            <form id="stdForm" method="post">
+                <div class="form-group">
+                    <span><label for="rollNo">Roll No:</label> <label id="rollNo-msg">
+                        </label></span>
+                    <input type="text" class="form-control" name="rollNo" id="rollNo" onChange = checkRoll()
+                           placeholder="Enter Roll Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="stdName">Student Name:</label>
+                    <input type="text" class="form-control" id="stdName"
+                           placeholder="Enter Student Name" name="stdName">
+                </div>
+                <div class="form-group">
+                    <label for="stdClass">Class:</label>
+                    <input type="text" class="form-control" id="stdClass"
+                           placeholder="Enter Class" name="stdClass">
+                </div>
+                <div class="form-group">
+                    <label for="stdDoB">DoB:</label>
+                    <input type="text" class="form-control" id="stdDoB"
+                           placeholder="Enter DoB" name="stdDoB">
+                </div>
+                <div class="form-group">
+                    <label for="stdAddr">Address:</label>
+                    <input type="text" class="form-control" id="stdAddr"
+                           placeholder="Enter Address" name="stdAddr">
+                </div>
+                <div class="form-group">
+                    <label for="stdEnrDate">Enrollment Date:</label>
+                    <input type="text" class="form-control" id="stdEnrDate"
+                           placeholder="Enter Enrollment Date" name="stdEnrDate">
+                </div>
+                <button class="btn btn-primary" id="stdSave" 
+                        onclick="saveStudent()" disabled>Save</button>
+                <button type="button" class="btn btn-primary" id="stdUpdate"
+                        onclick="updateStudent()" disabled>Change</button>
+                <button type="button" class="btn btn-primary" id="stdReset"
+                           onclick="resetStudent()" disabled>Reset</button>
+            </form>
+        </div>
+    </body>
+</html>
